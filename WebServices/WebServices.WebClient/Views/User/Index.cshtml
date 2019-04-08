@@ -1,0 +1,36 @@
+﻿@model List<User>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    <span> List User </span>
+    <a href="@Url.Action("Post","User")" class="btn btn-primary right"> New </a>
+</h2>
+<hr />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td> Id </td>
+            <td> FirstName </td>
+            <td> LastName </td>
+            <td> Actions </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td> @user.Id </td>
+                <td> @user.FirstName </td>
+                <td> @user.LastName </td>
+                <td>
+                    <a href="@Url.Action("Put","User", new { id=user.Id })" class="btn btn-success right"> Update </a>
+                    <a href="@Url.Action("Delete","User", new { id=user.Id })" class="btn btn-danger right"> Delete </a>
+                    <a href="@Url.Action("Detail","User", new { id=user.Id })" class="btn btn-default right"> Detail</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

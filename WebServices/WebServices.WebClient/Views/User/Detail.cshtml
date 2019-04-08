@@ -1,0 +1,43 @@
+﻿@model User
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+<hr />
+<div class="form-group">
+    <label> User Id : </label>
+    @Model.Id
+</div>
+<div class="form-group">
+    <label> FirstName</label>
+    @Model.FirstName
+</div>
+<div class="form-group">
+    <label> Lastname</label>
+    @Model.LastName
+</div>
+<div class="form-group">
+    <label> Password </label>
+    @Model.PasswordHash
+</div>
+<div class="form-group">
+    <label> Enable </label>
+    @Model.IsEnabled
+</div>
+<div class="form-group">
+    <label> Expiry Date</label>
+    @Model.ExpiryDate
+</div>
+<div class="form-group">
+    <label> PasswordChangedDate</label>
+    @Model.PasswordChangedDate
+</div>
+<div class="form-group">
+    <label> LogOnName</label>
+    @Model.LogOnName
+</div>
+<div class="form-group">
+    <a href="@Url.Action("Index","User")"> Back </a>
+</div>
+

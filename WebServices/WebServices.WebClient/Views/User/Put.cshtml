@@ -1,0 +1,46 @@
+﻿@model User
+@{
+    ViewBag.Title = "Put";
+}
+
+<h2>Put User</h2>
+<hr />
+
+<form method="put" action="@Url.Action("Put","User")">
+    <div class="form-group">
+        <label> User Id</label>
+        @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label> FirstName</label>
+        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label> Lastname</label>
+        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label> Password </label>
+        @Html.TextBoxFor(x => x.PasswordHash, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label> Enable </label>
+        @Html.TextBoxFor(x => x.IsEnabled, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label> Expiry Date</label>
+        @Html.TextBoxFor(x => x.ExpiryDate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label> PasswordChangedDate</label>
+        @Html.TextBoxFor(x => x.PasswordChangedDate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label> LogOnName</label>
+        @Html.TextBoxFor(x => x.LogOnName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="Save" />
+        <a href="@Url.Action("Index","User")"> Back </a>
+    </div>
+</form>
