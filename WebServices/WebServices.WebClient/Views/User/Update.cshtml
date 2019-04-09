@@ -6,7 +6,7 @@
 <h2>Put User</h2>
 <hr />
 
-<form method="put" action="@Url.Action("Put","User")">
+<form method="put" action="@Url.Action("Update","User")">
     <div class="form-group">
         <label> User Id</label>
         @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })

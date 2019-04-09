@@ -42,10 +42,10 @@ namespace WebServices.WebApi.Controllers
         public bool Put(User user)
         {
             var foundUser = DB.Users.FirstOrDefault(x => x.Id == user.Id);
-            foundUser.FirstName = user.FirstName;
-            foundUser.LastName = user.LastName;
+            foundUser.FirstName = user.FirstName.Trim();
+            foundUser.LastName = user.LastName.Trim();
             foundUser.LogOnName = user.LogOnName;
-            foundUser.PasswordHash = user.PasswordHash;
+            foundUser.PasswordHash = user.PasswordHash.Trim();
             foundUser.PasswordChangedDate = user.PasswordChangedDate;
             foundUser.IsEnabled = user.IsEnabled;
             foundUser.ExpiryDate = user.ExpiryDate;

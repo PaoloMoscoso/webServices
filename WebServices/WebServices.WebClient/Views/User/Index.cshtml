@@ -25,7 +25,7 @@
                 <td> @user.FirstName </td>
                 <td> @user.LastName </td>
                 <td>
-                    <a href="@Url.Action("Put","User", new { id=user.Id })" class="btn btn-success right"> Update </a>
+                    <a href="@Url.Action("Update","User", new { id=user.Id })" class="btn btn-success right"> Update </a>
                     <a href="@Url.Action("Delete","User", new { id=user.Id })" class="btn btn-danger right"> Delete </a>
                     <a href="@Url.Action("Detail","User", new { id=user.Id })" class="btn btn-default right"> Detail</a> 
                 </td>

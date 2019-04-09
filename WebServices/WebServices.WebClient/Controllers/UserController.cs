@@ -59,7 +59,7 @@ namespace WebServices.WebClient.Controllers
         }
 
         [HttpGet]
-        public ActionResult Put(Guid id)
+        public ActionResult Update(Guid id)
         {
             HttpClient clientHttp = new HttpClient();
             clientHttp.BaseAddress = new Uri("http://localhost:22644/");
@@ -74,11 +74,11 @@ namespace WebServices.WebClient.Controllers
         }
 
         [HttpPut]
-        public ActionResult Put(User user)
+        public ActionResult Update(User user)
         {
             HttpClient clientHttp = new HttpClient();
             clientHttp.BaseAddress = new Uri("http://localhost:22644/");
-            var request = clientHttp.PutAsync("api/User", user, new JsonMediaTypeFormatter()).Result;
+            var request = clientHttp.PostAsync("api/User", user, new JsonMediaTypeFormatter()).Result;
             if (request.IsSuccessStatusCode)
             {
                 var users = request.Content.ReadAsStringAsync().Result;

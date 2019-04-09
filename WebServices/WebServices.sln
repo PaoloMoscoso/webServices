@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.WebClient", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.Domain", "WebServices.Domain\WebServices.Domain.csproj", "{FD27A2C8-AEB3-436B-9C21-FC3D713F3498}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.ODataService", "WebServices.ODataService\WebServices.ODataService.csproj", "{563E2CE5-DB0E-4860-9556-E63598736E75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FD27A2C8-AEB3-436B-9C21-FC3D713F3498}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD27A2C8-AEB3-436B-9C21-FC3D713F3498}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD27A2C8-AEB3-436B-9C21-FC3D713F3498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{563E2CE5-DB0E-4860-9556-E63598736E75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563E2CE5-DB0E-4860-9556-E63598736E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563E2CE5-DB0E-4860-9556-E63598736E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563E2CE5-DB0E-4860-9556-E63598736E75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
