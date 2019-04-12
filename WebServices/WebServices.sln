@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.Domain", "WebSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.ODataService", "WebServices.ODataService\WebServices.ODataService.csproj", "{563E2CE5-DB0E-4860-9556-E63598736E75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.KnockoutClient", "WebServices.KnockoutClient\WebServices.KnockoutClient.csproj", "{2FEF927F-D9F4-44F1-8C39-CE7428B92574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices.KendoClient", "WebServices.KendoClient\WebServices.KendoClient.csproj", "{8DA7FD43-45D4-4E86-8A64-76A5798FB35B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{563E2CE5-DB0E-4860-9556-E63598736E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{563E2CE5-DB0E-4860-9556-E63598736E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{563E2CE5-DB0E-4860-9556-E63598736E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEF927F-D9F4-44F1-8C39-CE7428B92574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEF927F-D9F4-44F1-8C39-CE7428B92574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEF927F-D9F4-44F1-8C39-CE7428B92574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEF927F-D9F4-44F1-8C39-CE7428B92574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA7FD43-45D4-4E86-8A64-76A5798FB35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA7FD43-45D4-4E86-8A64-76A5798FB35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA7FD43-45D4-4E86-8A64-76A5798FB35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA7FD43-45D4-4E86-8A64-76A5798FB35B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

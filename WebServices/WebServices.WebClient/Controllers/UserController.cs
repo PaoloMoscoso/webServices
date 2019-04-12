@@ -8,8 +8,6 @@ using System.Web.Mvc;
 using WebServices.Domain;
 using System.Net.Http.Formatting;
 
-
-
 namespace WebServices.WebClient.Controllers
 {
     public class UserController : Controller

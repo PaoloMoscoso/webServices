@@ -11,9 +11,11 @@ using System.Web.Http.ModelBinding;
 using System.Web.Http.OData;
 using System.Web.Http.OData.Routing;
 using WebServices.Data.Models;
+using System.Web.Http.Cors;
 
 namespace WebServices.ODataService.Controllers
 {
+
     /*
     The WebApiConfig class may require additional changes to add a route for this controller. Merge these statements into the Register method of the WebApiConfig class as applicable. Note that OData URLs are case sensitive.
 
@@ -24,6 +26,7 @@ namespace WebServices.ODataService.Controllers
     builder.EntitySet<User>("Users");
     config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
     */
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UsersController : ODataController
     {
         private LibraryConnection db = new LibraryConnection();

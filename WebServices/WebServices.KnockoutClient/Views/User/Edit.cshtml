@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2> Edit </h2>
+<div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <h4> User </h4>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="FirstName">
+                    FirstName
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="FirstName" name="FirstName" type="text" value=""
+                           data-bind="value: FirstName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="LastName">
+                    LastName
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="LastName" name="LastName" type="text" value=""
+                           data-bind="value: LastName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="IsEnabled">
+                    IsEnabled
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="IsEnabled" name="IsEnabled" type="text" value=""
+                           data-bind="value: IsEnabled">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="PasswordChangedDate">
+                    PasswordChangedDate
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="PasswordChangedDate" name="PasswordChangedDate"
+                           type="text" value="" data-bind="value: PasswordChangedDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="ExpiryDate">
+                    ExpiryDate
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="ExpiryDate" name="ExpiryDate" type="text" value=""
+                           data-bind="value: ExpiryDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="PasswordHash">
+                    PasswordHash
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="PasswordHash" name="PasswordHash" type="text" value=""
+                           data-bind="value: PasswordHash">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2" for="LogOnName">
+                    LogOnName
+                </label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="LogOnName" name="LogOnName" type="text" value=""
+                           data-bind="value: LogOnName">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" data-bind="click: updateUser" value="Update" class="btn btn-default">
+                </div>
+            </div>
+        </div> }
+    <script type="text/javascript">
+        var selectedUser = '@Html.Raw(ViewBag.selectedUser)'
+    </script>
+    <div> @Html.ActionLink("BacktoList", "") </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/knockout-3.5.0.js"></script>
+    <script src="~/Scripts/KOScripts/KOUpdate.js"></script>
+</div>

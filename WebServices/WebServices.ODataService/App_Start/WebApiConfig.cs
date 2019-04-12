@@ -13,6 +13,7 @@ namespace WebServices.ODataService
         public static void Register(HttpConfiguration config)
         {
             // New code:
+            config.EnableCors();
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<User>("Users");
             config.Routes.MapODataServiceRoute(

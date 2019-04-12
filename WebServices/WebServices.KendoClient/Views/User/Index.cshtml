@@ -1,0 +1,79 @@
+﻿<script src="~/js/jquery.min.js"></script>
+<script src="~/js/kendo.all.min.js"></script>
+<head>
+    <title> Users </title>
+</head>
+@{  
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+} 
+@using (Html.BeginForm())
+{ 
+<body>
+    <div class="main-content">
+        <div id="user-table"></div>
+    </div>
+    <script src="~/Scripts/knockout-3.5.0.js"></script>
+    <script src="~/Scripts/KEScript/KECrud.js"></script>
+    <script>
+        $("#user-table").kendoGrid({
+        dataSource: modelView.dataSource,
+        editable: "inline",
+        toolbar: ["create", "save", "cancel"],
+
+        columns: [{
+            field: "Id",
+            title: "Id",
+            editable: false,
+            filterable: false,
+        }, {
+            field: "FirstName",
+            title: "FirstName",
+        }, {
+            field: "LastName",
+            title: "LastName",
+            filterable: {
+                multi: true,
+                search: true,
+                search: true
+            }
+        }, {
+            field: "IsEnabled",
+            title: "IsEnabled",
+            width: 200, 
+        }, {
+            field: "PasswordHash",
+            title: "PasswordHash",
+            width: 80,
+            filterable: {
+                multi: true
+            }
+        }, {
+            field: "PasswordChangedDate",
+            title: "PasswordChangedDate",
+            format: "{0:MM/dd/yyyy}"
+        }, {
+            field: "ExpiryDate",
+            title: "ExpiryDate",
+            format: "{0:MM/dd/yyyy}"
+        }, {
+            field: "LogOnName",
+            title: "LogOnName"
+        }, {
+            command: ["edit", "destroy"],
+            title: "Actions",
+        }
+
+        ],
+        height: "500px",
+        pageable: {
+            refresh: true,
+            pageSizes: true,
+            buttonCount: 5
+        },
+    }).data("kendoGrid");
+    
+    </script>
+</body>
+}  
+
